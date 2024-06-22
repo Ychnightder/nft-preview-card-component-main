@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --softBlue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --mainDark: hsl(217, 54%, 11%); /*  (main BG) */
+  --cardDark: hsl(216, 50%, 16%); /* (card BG)*/
+  --lineDark: hsl(215, 32%, 27%); /*(line)*/
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  background: var(--mainDark);
+  font-size: 18px;
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.wrapp {
+  width: 375px;
+  height: 620px;
+  background: var(--cardDark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.wrapp .center {
+  position: relative;
+  width: 330px;
+  height: 570px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center .imgBox {
+  width: 100%;
+}
+.imgBox img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.imgBox .eyebox {
+  position: absolute;
+  width: 100%;
+  height: 330px;
+  opacity: 0.5;
+  visibility: hidden;
+  border-radius: 10px;
+  background: var(--Cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all ease-out 300ms;
+}
+.imgBox .eyebox img {
+  width: 60px;
+  opacity: 1 !important;
+}
+.imgBox:hover .eyebox {
+  visibility: visible;
+}
+.textdown {
+  width: 100%;
+  height: 240px;
+}
+.textdown .textup {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.textup h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--White);
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all ease-out 300ms;
+}
+.textup h1:hover {
+  color: var(--Cyan);
+}
+.textup .para {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--softBlue);
+  margin-bottom: 15px;
+}
+.textup .text-desc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  color: var(--softBlue);
+}
+.text-desc p {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+}
+.text-desc p:first-child {
+  color: var(--Cyan);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.text-desc p img {
+  margin-right: 5px;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background: var(--lineDark);
+  margin: 20px 0;
+}
+.textup .profil {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.profil .imgProfil {
+  background: var(--White);
+  width: 42px;
+  height: 42px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+.imgProfil img {
+  width: 40px;
+}
+.profil p {
+  color: var(--softBlue);
+  font-weight: 300;
+}
+.profil p span {
+  color: var(--White);
+  cursor: pointer;
+  transition: all ease-out 300ms;
+}
+.profil p span:hover {
+  color: var(--Cyan);
+}
+
+@media screen and (max-width: 400px) {
+  .wrapp {
+    width: 320px;
+    height: 550px;
+  }
+  .wrapp .center {
+    width: 280px;
+    height: 500px;
+  }
+  .center .eyebox {
+    height: 280px;
+  }
+  .textup .para {
+    font-size: 15px;
+  }
+}
